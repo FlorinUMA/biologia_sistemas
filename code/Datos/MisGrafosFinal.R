@@ -74,7 +74,7 @@ barplot(
   col = "skyblue",
   main = "Gráfico de Barras",
   xlab = "Categorías",
-  ylab = "Valores",
+  ylab = "Modularidad",
   names.arg = c("nodos", "enlace")
 )
 dev.off()
