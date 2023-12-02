@@ -1,34 +1,29 @@
 \section{Materiales y métodos}
 
-\subsection{Descripción general}
-
-A lo largo de la investigación, se ha hecho uso de diversos programas, herramientas y bases de datos para la adecuada puesta en marcha del estudio. Entre las bases de datos podemos encontrar \textbf{HPO (Human Phenotype Ontology)} que es una ontología formal de fenotipos humanos (https://hpo.jax.org/app/) y \textbf{StringDB} (https://string-db.org/), base de datos la cual se ha usado poder realizar la interacción entre las proteínas del fenotipo de interés. Posteriormente, se han procesado los datos obtenidos para hacer uso de ellos en R y Python (https://www.python.org/) con el paquete de \textbf{iGraph} (https://igraph.org/) y así, esbozar los grafos que se han considerado de interés en nuestro estudio.
+A lo largo de la investigación, se ha hecho uso de diversos programas, herramientas y bases de datos para la adecuada puesta en marcha del estudio. Entre las bases de datos podemos encontrar \textbf{HPO (Human Phenotype Ontology)} \cite{hpo} que es una ontología formal de fenotipos humanos  y \textbf{StringDB} \cite{stringdb}, base de datos la cual se ha usado poder realizar la interacción entre las proteínas del fenotipo de interés. Posteriormente, se han procesado los datos obtenidos para hacer uso de ellos en R y Python con el paquete de \textbf{iGraph} \cite{igraph} y así, esbozar los grafos que se han considerado de interés en nuestro estudio.
 
 \subsection{Herramientas y materiales usados}
-% Todo este párrafo se puede resumir en dos lineas.
-% En esta sección, se detallan los materiales y equipos utilizados durante el curso de la investigación. La selección precisa de materiales y la utilización de equipos adecuados son esenciales para garantizar la validez y la reproducibilidad de los resultados obtenidos. A continuación, se presenta una enumeración detallada de los materiales, incluyendo marcas, modelos y proveedores, así como la especificación de cualquier equipo o instrumento utilizado en los experimentos. \\
 
 Los elementos que han sido utilizados durante la realización de la investigación, los materiales, incluyendo marcas, modelos y proveedores, así como la especificación de cualquier otro instrumento utilizado en los experimentos son:
 
 Equipo Usado:
-\begin{itemize}
-	\item Portátil ROG STRIX G15:
-	\begin{itemize}
-		\item Ubuntu 22.04.3 LTS % Por dios, no pongáis windows. Bash no se puede usar en Windows CLAU: PERDON JAJAJAJAJAJAJA 
-		\item Procesador: Intel(R) Core(TM) i7-10750H CPU @ 2.60 GHz
-		\item RAM: 16,0 GB
-		\item Sistema: Sistema operativo de 64 bits, procesador basado en x86-64
-		\item Fabricante: ASUSTeK COMPUTER INC.
-	\end{itemize}
-\end{itemize}
+    \begin{itemize}
+        \item Portátil ROG STRIX G15:
+        \begin{itemize}
+            \item Ubuntu 22.04.3 LTS
+            \item Procesador: Intel(R) Core(TM) i7-10750H CPU @ 2.60 GHz
+            \item RAM: 16,0 GB
+            \item Sistema: Sistema operativo de 64 bits, procesador basado en x86-64
+            \item Fabricante: ASUSTeK COMPUTER INC.
+        \end{itemize}
+    \end{itemize}
 
 Bases de datos:
 \begin{itemize}
-	\item \textbf{StringDB}: es una base de datos utilizada en biología de sistemas y genómica funcional. Su función principal ha sido proporcionar información sobre las interacciones entre proteínas del fenotipo de interés. La base de datos incluye datos experimentales y predicciones computacionales sobre estas interacciones, permitiendo así explorar y comprender las relaciones entre proteínas.
-	\item \textbf{HPO}: Ontología de Fenotipos Humanos, es un sistema estandarizado para describir fenotipos humanos en el contexto de enfermedades genéticas. Organiza términos en una estructura jerárquica, establece relaciones entre ellos y se utiliza ampliamente en genómica clínica para analizar la asociación entre genotipos y fenotipos. Se ha usado para obtener los datos del fenotipo de Megalencefalia.
+        \item \textbf{StringDB}: es una base de datos utilizada en biología de sistemas y genómica funcional. Su función principal ha sido proporcionar información sobre las interacciones entre proteínas del fenotipo de interés. La base de datos incluye datos experimentales y predicciones computacionales sobre estas interacciones, permitiendo así explorar y comprender las relaciones entre proteínas.
+        \item \textbf{HPO}: Ontología de Fenotipos Humanos, es un sistema estandarizado para describir fenotipos humanos en el contexto de enfermedades genéticas. Organiza términos en una estructura jerárquica, establece relaciones entre ellos y se utiliza ampliamente en genómica clínica para analizar la asociación entre genotipos y fenotipos. Se ha usado para obtener los datos del fenotipo de Megalencefalia.
 \end{itemize}
 
-%TODO Añadir las librerías usadas en el script de R
 
 El conjunto de software utilizado en el proyecto incluye varias herramientas clave. En primer lugar, se emplea \textbf{Visual Studio Code (VS Code)} \cite{vscode}, un editor de código fuente gratuito y de código abierto desarrollado por Microsoft. Este editor es altamente personalizable y extensible, con un rico ecosistema de extensiones que permiten ampliar su funcionalidad. Adicionalmente, VS Code ofrece soporte para una amplia gama de lenguajes de programación, siendo Python uno de los principales enfoques.
 
@@ -41,24 +36,21 @@ En el contexto del lenguaje de programación R, se utiliza el entorno de desarro
 Complementando estas herramientas, se incorpora la biblioteca \textbf{iGraph}, especializada en el análisis de redes y grafos. iGraph proporciona funciones y herramientas para la creación, visualización y análisis de estructuras de red en diversos contextos. Esta biblioteca resulta especialmente útil en la representación y exploración de relaciones entre nodos en un grafo. En resumen, la combinación de Visual Studio Code, Pandas, Requests, RStudio e iGraph proporciona un conjunto integral de herramientas para el desarrollo, análisis y visualización de datos en el proyecto.
 
 
-% Este párrafo creo que sobra fijo
-% Esta enumeración exhaustiva proporciona información detallada sobre los componentes clave utilizados en la investigación, asegurando que otros investigadores puedan replicar los experimentos de manera precisa. La especificación de marcas, modelos y proveedores es fundamental para la reproducibilidad y la comprensión completa de los métodos empleados.
-
-% ¿Debería ir en la subsección de diseño e implementación?
-Para asegurar la reproducibilidad, se aconseja tener en cuenta que la versión de R utilizada es ... y la versión de Python que se empleará es ... No obstante, las librerías que se emplearán deberán estar actualizadas a versiones concreta, ya que nuevas actualizaciones podrán inutilizar el código. Para mitigar riesgos de fallo, un script automático va a ser el encargado de instalar la versión correcta en el entorno del usuario.
+Para asegurar la reproducibilidad, se aconseja tener en cuenta que la versión de R utilizada es 4.3.1 y la versión de Python que se empleará es 3.10.
 
 \subsection{Diseño y procedimiento experimental}
-El presente estudio se basó en la recopilación de datos relacionados con megalencefalia desde la HPO. En concreto, se obtuvo el archivo de asociaciones de genes correspondiente al fenotipo HP:0001355 (megalencefalia). Una vez se obtuvo el archivo, se procesaron los datos en Jupyter mediante el uso de \textbf{pandas} con la cual se realizó operaciones de limpieza y transformación para garantizar la calidad y consistencia de los datos. 
 
-Posteriormente, se empleó la API de StringDB y la biblioteca \textbf{requests} para generar un modelo de interacción entre proteínas asociadas a megalencefalia. La información se devolvió en formato JSON y se elegió la información más relevante para nuestro estudio. Una vez hecho esto, se guardaron los resultados en un fichero CSV y se prosiguió con el siguiente paso, que era generar los grafos detallados de las relaciones entre las proteínas en Rstudio. \\
 
-Como siguiente paso, ya en Rstudio se cargaron los datos desde el archivo CSV y se creó el grafo de interacciones de la siguiente manera:
+El presente estudio se basó en la recopilación de datos relacionados con megalencefalia desde la HPO. En concreto, se obtuvo el archivo de asociaciones de genes correspondiente al fenotipo HP:0001355 (megalencefalia). Posteriormente, se realizó el procesamiento de los datos mediante operaciones de limpieza y transformación para garantizar la calidad y consistencia de los datos. 
 
-Durante el análisis de interacciones de proteínas, se identificaron nodos únicos a partir de las interacciones, generando un grafo no dirigido que representa estas relaciones. Se utilizaron los algoritmos Louvain \cite{louvain} y edge betweenness \cite{cluster_edge_betweenness} para identificar comunidades en un grafo de interacciones de proteínas, siendo Louvain elegido por su eficiencia y capacidad para optimizar la modularidad en grandes conjuntos de datos. Este algoritmo destaca por su rapidez en el manejo de datos extensos y su flexibilidad para detectar comunidades superpuestas. Las comunidades fueron visualizadas mediante colores para mayor claridad. El segundo algoritmo, edge betweenness, se utilizará para una comparación adicional entre ambos enfoques.
 
-Además, se desarrolló una función para realizar análisis de enriquecimiento funcional en cada comunidad y se aplicó la función a cada comunidad identificada, proporcionando información sobre las funciones biológicas asociadas. Sumado a esto, se aplicó el algoritmo de detección de comunidades por enlace al grafo y, de nuevo, se asignaron colores a las comunidades por enlace y se visualizó el grafo. Se compararon las dos comunidades a través de la modularidad (REF), y se mostrará una gráfica posteriormente donde se podrá ver la comparación. También, se ha producido una comparación de las dos comunidades, observando qué nodos se encontraban en el mismo cluster y cuáles no. Por último, se ha aplicado la función de enriquecimiento funcional a las comunidades identificadas por enlace con el método ganador y se obtuvo información sobre las funciones biológicas asociadas a estas comunidades con que conjunto de genes dentro de la comunidad lo provocaban.
+Posteriormente, se empleó la API de StringDB para generar un modelo de interacción entre proteínas asociadas a megalencefalia. De la información devuelta, se eligió la más relevante para nuestro estudio, para luego guardarse y generar los grafos detallados de las relaciones entre las proteínas en Rstudio. \\
 
-Todos lo descrito proporcionan una visión general del flujo de trabajo, que abarcan desde la adquisición de datos en HPO hasta el análisis de enriquecimiento funcional en R, demuestran un enfoque integrado utilizando StringDB, Jupyter y R para explorar y comprender las complejas interacciones de proteínas asociadas a megalencefalia.
+Como siguiente paso, se cargaron en Rstudio los datos pertenecientes a la red de interacción de proteínas obtenidas mediante la herramienta de StringDB y se creó el grafo de interacciones.
 
+
+Durante el análisis de interacciones de proteínas, se identificaron nodos únicos a partir de las interacciones, generando un grafo no dirigido que representa estas relaciones. Se utilizaron los algoritmos Louvain \cite{louvain} y \textit{edge betweenness} \cite{cluster_edge_betweenness} para identificar comunidades en un grafo de interacciones de proteínas, siendo Louvain elegido por su eficiencia y capacidad para optimizar la modularidad en grandes conjuntos de datos. Este algoritmo destaca por su rapidez en el manejo de datos extensos y su flexibilidad para detectar comunidades superpuestas. Las comunidades fueron visualizadas mediante colores para mayor claridad. El segundo algoritmo, \textit{edge betweenness}, se utilizará para una comparación adicional entre ambos enfoques.
+
+Además, se desarrolló una función para realizar análisis de enriquecimiento funcional en cada comunidad y se aplicó la función a cada comunidad identificada, proporcionando información sobre las funciones biológicas asociadas. Sumado a esto, se aplicó el algoritmo de detección de comunidades por enlace al grafo y, de nuevo, se asignaron colores a las comunidades por enlace y se visualizó el grafo. Se compararon las dos comunidades a través de la modularidad \cite{modularity}. También, se ha producido una comparación de las dos comunidades, observando qué nodos se encontraban en el mismo cluster y cuáles no. Por último, se ha generado un enriquecimiento funcional a las comunidades identificadas por enlace con el método ganador y se obtuvo información sobre las funciones biológicas asociadas a estas comunidades con que conjunto de genes dentro de la comunidad lo provocaban.
 
 
