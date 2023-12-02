@@ -30,14 +30,15 @@ Bases de datos:
 
 %TODO Añadir las librerías usadas en el script de R
 
-Software:
-\begin{itemize}
-	\item \textbf{Visual Studio}: Es un conjunto de herramientas de desarrollo integrado (IDE) desarrollado por Microsoft. Visual Studio incluye características como resaltado de sintaxis, depuración visual, gestión de proyectos, herramientas de diseño de interfaz de usuario y control de versiones. Es ampliamente utilizado en el desarrollo de software para aplicaciones de escritorio, web y móviles, ofreciendo una plataforma integral para el ciclo de vida completo del desarrollo de software.
-	\item \textbf{Pandas (https://pandas.pydata.org/)}: Pandas es una biblioteca de Python utilizada para manipular y analizar datos de manera eficiente. Por otro lado, requests es una biblioteca de Python que permite realizar solicitudes HTTP. En Jupyter, requests se utiliza para interactuar con APIs web, como la API de StringDB.
-	\item \textbf{Requests (https://pypi.org/project/requests/)}: biblioteca de Python que permite realizar solicitudes HTTP. En nuestros scripts, requests se utiliza para interactuar con APIs web, como la API de StringDB.
-	\item \textbf{RStudio} (https://es.wikipedia.org/wiki/RStudio): Es un entorno de desarrollo integrado (IDE) para el lenguaje de programación R. Proporciona herramientas avanzadas y una interfaz amigable, siendo ampliamente utilizado en estadísticas y análisis de datos.
-	\item \textbf{iGraph}: Es una biblioteca especializada en el análisis de redes y grafos. Proporciona funciones y herramientas para crear, visualizar y analizar estructuras de red en diversos contextos, siendo especialmente útil en la representación y exploración de relaciones entre nodos en un grafo.
-\end{itemize}
+El conjunto de software utilizado en el proyecto incluye varias herramientas clave. En primer lugar, se emplea \textbf{Visual Studio Code (VS Code)} \cite{vscode}, un editor de código fuente gratuito y de código abierto desarrollado por Microsoft. Este editor es altamente personalizable y extensible, con un rico ecosistema de extensiones que permiten ampliar su funcionalidad. Adicionalmente, VS Code ofrece soporte para una amplia gama de lenguajes de programación, siendo Python uno de los principales enfoques.
+
+Para la manipulación eficiente y el análisis de datos, se utiliza la biblioteca de Python llamada \textbf{Pandas} \cite{pandas}. Esta biblioteca es conocida por proporcionar estructuras de datos flexibles y herramientas de análisis de datos eficaces.
+
+En el ámbito de las solicitudes HTTP y la interacción con APIs web, se integra la biblioteca \textbf{Requests} \cite{requests} de Python. Esta biblioteca facilita la realización de solicitudes HTTP, siendo esencial para la comunicación con APIs web, como la API de StringDB.
+
+En el contexto del lenguaje de programación R, se utiliza el entorno de desarrollo integrado (IDE) \textbf{RStudio}. Rstudio \cite{rstudio} ofrece herramientas avanzadas y una interfaz amigable, siendo ampliamente utilizado en el ámbito de estadísticas y análisis de datos.
+
+Complementando estas herramientas, se incorpora la biblioteca \textbf{iGraph}, especializada en el análisis de redes y grafos. iGraph proporciona funciones y herramientas para la creación, visualización y análisis de estructuras de red en diversos contextos. Esta biblioteca resulta especialmente útil en la representación y exploración de relaciones entre nodos en un grafo. En resumen, la combinación de Visual Studio Code, Pandas, Requests, RStudio e iGraph proporciona un conjunto integral de herramientas para el desarrollo, análisis y visualización de datos en el proyecto.
 
 
 % Este párrafo creo que sobra fijo
@@ -53,18 +54,11 @@ Posteriormente, se empleó la API de StringDB y la biblioteca \textbf{requests} 
 
 Como siguiente paso, ya en Rstudio se cargaron los datos desde el archivo CSV y se creó el grafo de interacciones de la siguiente manera:
 
-\begin{itemize}
-	\item Se identificaron nodos únicos a partir de las interacciones y con ello se creó un grafo no dirigido que representa las interacciones entre proteínas.
-	\item Se utilizó el algoritmo Louvain y edge betweenness para detectar comunidades de proteínas en el grafo,el primero detectando comunidades por nodos y el segundo por enlaces, a las cuales se le asignaron un color para para hacer su visualización más cómoda. El algoritmo de Louvain fue elegido para la detección de comunidades en el grafo de interacciones de proteínas debido a su eficiencia computacional y capacidad para optimizar la modularidad del grafo. Este algoritmo es reconocido por su rapidez y eficacia en el manejo de conjuntos de datos grandes, lo que resulta fundamental para aplicaciones prácticas en el análisis de interacciones biológicas. La flexibilidad del algoritmo, su capacidad para detectar comunidades superpuestas y su relativa facilidad de implementación contribuyeron a su elección como una herramienta efectiva para la identificación de patrones de agrupamiento en el contexto de comunidades de proteínas. El otro algoritmo se usará para realizar una comparación entre los 2.
-	\item Se desarrolló una función para realizar análisis de enriquecimiento funcional en cada comunidad y se aplicó la función a cada comunidad identificada, proporcionando información sobre las funciones biológicas asociadas.
-	\item Se aplicó el algoritmo de detección de comunidades por enlace al grafo y, de nuevo, se asignaron colores a las comunidades por enlace y se visualizó el grafo.
-	\item 
-	\item Se aplicó la función de enriquecimiento funcional a las comunidades identificadas por enlace y se obtuvo información sobre las funciones biológicas asociadas a estas comunidades.
-	
-\end{itemize}
-Todos estos pasos proporcionan una visión general del flujo de trabajo, que abarcan desde la adquisición de datos en HPO hasta el análisis de enriquecimiento funcional en R, demuestran un enfoque integrado utilizando StringDB, Jupyter y R para explorar y comprender las complejas interacciones de proteínas asociadas a megalencefalia.
+Durante el análisis de interacciones de proteínas, se identificaron nodos únicos a partir de las interacciones, generando un grafo no dirigido que representa estas relaciones. Se utilizaron los algoritmos Louvain \cite{louvain} y edge betweenness \cite{cluster_edge_betweenness} para identificar comunidades en un grafo de interacciones de proteínas, siendo Louvain elegido por su eficiencia y capacidad para optimizar la modularidad en grandes conjuntos de datos. Este algoritmo destaca por su rapidez en el manejo de datos extensos y su flexibilidad para detectar comunidades superpuestas. Las comunidades fueron visualizadas mediante colores para mayor claridad. El segundo algoritmo, edge betweenness, se utilizará para una comparación adicional entre ambos enfoques.
+
+Además, se desarrolló una función para realizar análisis de enriquecimiento funcional en cada comunidad y se aplicó la función a cada comunidad identificada, proporcionando información sobre las funciones biológicas asociadas. Sumado a esto, se aplicó el algoritmo de detección de comunidades por enlace al grafo y, de nuevo, se asignaron colores a las comunidades por enlace y se visualizó el grafo. Se compararon las dos comunidades a través de la modularidad (REF), y se mostrará una gráfica posteriormente donde se podrá ver la comparación. También, se ha producido una comparación de las dos comunidades, observando qué nodos se encontraban en el mismo cluster y cuáles no. Por último, se ha aplicado la función de enriquecimiento funcional a las comunidades identificadas por enlace con el método ganador y se obtuvo información sobre las funciones biológicas asociadas a estas comunidades con que conjunto de genes dentro de la comunidad lo provocaban.
+
+Todos lo descrito proporcionan una visión general del flujo de trabajo, que abarcan desde la adquisición de datos en HPO hasta el análisis de enriquecimiento funcional en R, demuestran un enfoque integrado utilizando StringDB, Jupyter y R para explorar y comprender las complejas interacciones de proteínas asociadas a megalencefalia.
 
 
-\subsection{Limitaciones}
-Una limitación significativa de este proyecto reside en la falta de sujetos humanos reales para estudiar la megalencefalia. Dada la naturaleza de nuestro enfoque, nos basamos en datos y simulaciones, sin contar con la participación directa de individuos afectados. Aunque se ha empleado un enfoque riguroso utilizando modelos y datos disponibles, la ausencia de casos clínicos reales podría afectar la generalización de los resultados a situaciones específicas de pacientes con megalencefalia. Se recomienda cautela al extrapolar los hallazgos a poblaciones humanas y se sugiere la validación adicional mediante estudios clínicos con participantes reales en futuras investigaciones. 
 
