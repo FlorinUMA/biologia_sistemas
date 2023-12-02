@@ -1,0 +1,61 @@
+Uploading data to Enrichr... Done.
+  Querying GO_Biological_Process_2018... Done.
+Parsing results... Done.
+                            genes
+1 TSC2,TSC1,MTOR,PTEN,TBC1D7,AKT3
+                                                              funciones
+1 negative regulation of intracellular signal transduction (GO:1902532)
+Uploading data to Enrichr... Done.
+  Querying GO_Biological_Process_2018... Done.
+Parsing results... Done.
+                                          genes
+1 PIK3R2,KRAS,PIK3CA,FGF8,FGFR3,NRAS,HRAS,FGFR2
+2 PIK3R2,KRAS,PIK3CA,FGF8,FGFR3,NRAS,HRAS,FGFR2
+3 PIK3R2,KRAS,PIK3CA,FGF8,FGFR3,NRAS,HRAS,FGFR2
+                                                                      funciones
+1                                                     MAPK cascade (GO:0000165)
+2 transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)
+3         positive regulation of intracellular signal transduction (GO:1902533)
+Uploading data to Enrichr... Done.
+  Querying GO_Biological_Process_2018... Done.
+Parsing results... Done.
+               genes
+1 NPRL2,NPRL3,DEPDC5
+2 NPRL2,NPRL3,DEPDC5
+3 NPRL2,NPRL3,DEPDC5
+4 NPRL2,NPRL3,DEPDC5
+5 NPRL2,NPRL3,DEPDC5
+                                                              funciones
+1               cellular response to amino acid starvation (GO:0034198)
+2                     negative regulation of TOR signaling (GO:0032007)
+3                              regulation of TOR signaling (GO:0032006)
+4                          cellular response to starvation (GO:0009267)
+5 negative regulation of intracellular signal transduction (GO:1902532)
+Uploading data to Enrichr... Done.
+  Querying GO_Biological_Process_2018... Done.
+Parsing results... Done.
+                                         genes
+1 SMO,SIX3,DISP1,SHH,GAS1,PTCH1,GLI2,ZIC2,CDON
+2 SMO,SIX3,DISP1,SHH,GAS1,PTCH1,GLI2,ZIC2,CDON
+                                                         funciones
+1                        smoothened signaling pathway (GO:0007224)
+2 negative regulation of transcription, DNA-templated (GO:0045892)
+Uploading data to Enrichr... Done.
+  Querying GO_Biological_Process_2018... Done.
+Parsing results... Done.
+        genes
+1 NODAL,TDGF1
+2 NODAL,TDGF1
+3 NODAL,TDGF1
+4 NODAL,TDGF1
+5 NODAL,TDGF1
+6 NODAL,TDGF1
+7 NODAL,TDGF1
+                                                                              funciones
+1                                                    BMP signaling pathway (GO:0030509)
+2                                        cellular response to BMP stimulus (GO:0071773)
+3 transmembrane receptor protein serine/threonine kinase signaling pathway (GO:0007178)
+4                           positive regulation of protein phosphorylation (GO:0001934)
+5                                positive regulation of cell proliferation (GO:0008284)
+6                                          regulation of apoptotic process (GO:0042981)
+7              regulation of transcription from RNA polymerase II promoter (GO:0006357)
