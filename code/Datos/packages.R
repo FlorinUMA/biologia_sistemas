@@ -1,16 +1,10 @@
 #!/usr/bin/env Rscript
 
-# igraph
-if (!require("igraph")) {
-    install.packages("igraph")
-}
+# Define the packages your script depends on
+required_packages <- c('igraph', 'sets', 'enrichR')
 
-# rmarkdown
-if (!require("sets")) {
-  install.packages("sets")
-}
+# Find out which packages are not installed yet
+packages_to_install <- setdiff(required_packages, rownames(installed.packages()))
 
-# enrichR
-if (!require("enrichR")) {
-    install.packages("enrichR")
-}
+# Install the missing packages
+if(length(packages_to_install)) install.packages(packages_to_install, dependencies = TRUE)
